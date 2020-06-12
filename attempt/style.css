@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+body, body * {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.panel {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: monospace;
+  text-transform: uppercase;
+  font-size: 32px;
+}
+
+.container :first-child {
+  background-image: url('../drawer-1.jpg');
+}
+
+.container :first-child::before {
+  content: 'Drawer #1';
+}
+
+.container :last-child {
+  background-image: url('../drawer-2.jpg');
+}
+
+.container :last-child::before {
+  content: 'Drawer #2';
+  color: white;
+}
+
+@media screen and (min-width: 555px) {
+  .container {
+    flex-flow: row nowrap;
+  }
+
+  .panel {
+    width: 50%;
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 44px;
+  }
+
+  .container :first-child {
+    background-image: url('../door-1.jpg');
+  }
+
+  .container :first-child::before {
+    content: 'Door #1';
+    color: purple;
+  }
+
+  .container :last-child {
+    background-image: url('../door-2.jpg');
+  }
+
+  .container :last-child::before {
+    content: 'Door #2';
+    color: pink;
+  }
+}
+
+@media screen and (min-width: 1111px) {
+  .container {
+    flex-flow: column-reverse nowrap;
+  }
+
+  .panel {
+    width: 100%;
+    font-family: serif;
+    font-size: 69px;
+  }
+
+  .container :first-child {
+    background-image: url('../house-1.jpg');
+  }
+
+  .container :first-child::before {
+    content: 'House #1';
+    color: red;
+  }
+
+  .container :last-child {
+    background-image: url('../house-2.jpg');
+  }
+
+  .container :last-child::before {
+    content: 'House #2';
+    color: yellow;
+  }
+}

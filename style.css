@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+}
+
+body, body * {
+  box-sizing: border-box;
+}
+
+.container {}
+
+.panel {}
+
+@media screen and (min-width: 555px) {}
+
+@media screen and (min-width: 1111px) {}
